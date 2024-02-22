@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/app.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="flex justify-between header h-[64px]">
+      <div class="logo">
+        <img
+          class="w-[300px] min-h-16"
+          src="/icons/michelin-guide-logo-dark.svg"
+          alt=""
+        />
+      </div>
+      <div class="navbar">
+        <div class="wrap">
+          <div class="nav-mobile">
+            <div class="nav-button px-[18px] py-[8px] float-right">
+              <img
+                class="w-[40px] text-[#ccc]"
+                src="/icons/bx-menu.svg"
+                alt="#"
+              />
+            </div>
+            <div
+              class="nav-items hidden absolute top-16 left-0 p-[25px] z-100 bg-[#ffffff] w-screen transition-[750ms]"
+            >
+              <div class="account grid border-b-[1px]">
+                <a class="h-[39px]" href="#">Login</a>
+                <a class="h-[39px]" href="#">Register</a>
+              </div>
+              <div class="information grid border-b-[1px] pt-[16px]">
+                <a class="h-[39px]" href="#">Best-of Guides</a>
+                <a class="h-[39px]" href="#">Contact us</a>
+                <a class="h-[39px]" href="#">Subscribe to our newsletter</a>
+                <a class="h-[39px]" href="#">TheFork prefered partnership</a>
+                <a class="h-[39px]" href="#">TheFork partner restaurants</a>
+              </div>
+              <div class="language pt-[16px]">
+                <a class="h-[39px]" href="#">Global - English</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="filter">
+        <div class="restaurant-search px-[15px] py-[20px]">
+          <h4 class="title">RESTAURANT</h4>
+          <div class="form-search">
+            <form
+              action=""
+              class="flex gap-[15px] px-[20px] py-[15px] border-[1px] border-[#ccccccc] rounded-[8px] mb-[8px]"
+            >
+              <div class="input-search flex">
+                <img src="icons/bx-search.svg" alt="" />
+                <input
+                  class="w-full border-0 outline-0 ml-[10px]"
+                  type="text"
+                  placeholder="Search for Destination, restaurant..."
+                />
+              </div>
+            </form>
+            <div class="filter-bar">
+              <form class="flex overflow-x-auto px-[20px] pb-[20px]" action="">
+                <div class="button-sort-by">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img
+                        class="w-[20px] min-w-[20px]"
+                        src="icons/sort-d3837cafce58bfed90cd014778dc781b.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="button-all">
+                  <div class="filter-bar-container">
+                    <button>
+                      <span>All</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-distinction">
+                  <div class="filter-bar-container bg-[#bd2333]">
+                    <button>
+                      <span class="text-[#fff]">New</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-online-booking">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img class="w-[20px]" src="icons/bx-color.svg" alt="" />
+                      <span>Distinction</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-days-open">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img
+                        class="w-[20px]"
+                        src="icons/bxs-user-check.svg"
+                        alt=""
+                      />
+                      <span>Online booking</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-cuisine">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img
+                        class="w-[20px]"
+                        src="icons/bxs-calendar.svg"
+                        alt=""
+                      />
+                      <span>Days open</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-services">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img
+                        class="w-[20px]"
+                        src="icons/bx-bowl-hot.svg"
+                        alt=""
+                      />
+                      <span>Cuisine</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-price">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img
+                        class="w-[20px]"
+                        src="icons/sort-d3837cafce58bfed90cd014778dc781b.svg"
+                        alt=""
+                      />
+                      <span>Service/Facilities</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="button-price">
+                  <div class="filter-bar-container">
+                    <button>
+                      <img class="w-[20px]" src="icons/bx-money.svg" alt="" />
+                      <span>Price</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="result-search">
+        <div class="container px-[8px]">
+          <div class="title my-6">
+            <h1 class="text-[30px] font-normal">
+              New: 1-20 of 297 restaurants
+            </h1>
+          </div>
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/Buchnas Food-Stella Costa-Fotografie-24.jpg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/DSC04688-2-min.jpeg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/DSC04561-min-2.jpg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/Kopie von EOSR9072.png"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/Holzgarten-Erlangen-Food6.jpeg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/Holzgarten-Erlangen-Food4.jpeg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <img
+                  class="w-full h-auto"
+                  src="/images/https://mitp-p-001.sitecorecontenthub.cloud/api/public/content/56d8fc20ac824758937fdcbe89eed3d0"
+                  alt=""
+                />
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <img
+                  class="w-full h-auto"
+                  src="/images/IMG_1823-Bearbeitet.jpg"
+                  alt=""
+                />
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/IMG_1569.jpeg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/19066bb1555dc41f2e35041a8f17441e.jpeg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img
+                    class="w-full h-auto"
+                    src="/images/Callo de Hacha.jpg"
+                    alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="result-product]">
+              <div class="imgage relative">
+                <a href="#"
+                  ><img class="w-full h-auto" src="/images/MTP.jpeg" alt=""
+                /></a>
+                <button
+                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
+                >
+                  Reserve a table
+                </button>
+              </div>
+              <div class="information p-4 text-black">
+                <div class="container">
+                  <div class="show-new">
+                    <span
+                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                      >New</span
+                    >
+                  </div>
+                  <div class="title mt-1">
+                    <a class="text-[28px] mb-6" href=""
+                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                    >
+                    <div class="info-restaurant grid gap-1 mt-[16px]">
+                      <span>Mettlach, Germany</span>
+                      <span>€€€ · Classic Cuisine</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="panigation flex justify-center">
+          <ul class="panigation-container flex align-center">
+            <li class="m-[3px]">
+              <!-- <object
+                class="px-[10px] py-[6px] border-[1px] border-[#a1a1a1] rounded-[5px] text-[#a1a1a1]"
+                type="image/svg+xml"
+                data="icons/bx-chevron-left.svg"
+                alt=""
+              ></object> -->
+            </li>
+            <li class="m-[3px]">
+              <span
+                class="px-[10px] py-[6px] border-[1px] border-[#a1a1a1] rounded-[5px] text-[22px] text-[#fff] bg-[#6c757d]"
+                >1</span
+              >
+            </li>
+            <li class="m-[3px]">
+              <span
+                class="px-[10px] py-[6px] border-[1px] border-[#a1a1a1] rounded-[5px] text-[22px] text-[#4d4d4d]"
+                >2</span
+              >
+            </li>
+            <li class="m-[3px]">
+              <span
+                class="px-[10px] py-[6px] border-[1px] border-[#a1a1a1] rounded-[5px] text-[22px] text-[#4d4d4d]"
+                >3</span
+              >
+            </li>
+            <li class="m-[3px]">
+              <!-- <object
+                class="px-[10px] py-[6px] border-[1px] border-[#a1a1a1] rounded-[5px] text-[#a1a1a1]"
+                type="image/svg+xml"
+                data="icons/bx-chevron-right.svg"
+                alt=""
+              ></object> -->
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-subcrible-fullwidth mt-[100px]">
+        <div class="container px-[16px]">
+          <div class="subcrible-bg-image">
+            <img class="w-screen" src="/images/footer-img.jpg" alt="" />
+          </div>
+          <div class="subcrible-content">
+            <div class="container px-4">
+              <div
+                class="wrap-box flex mt-[-128px] relative bg-[#fff] rounded-[10px]"
+              >
+                <div class="image-content basis-1/3">
+                  <img src="images/app-pic-en.jpg" alt="" />
+                </div>
+                <div class="title basis-5/12 p-[16px]">
+                  <img class="w-[36px]" src="icons/bx-color.svg" alt="" />
+                  <h2 class="text-[30px]">
+                    Use the app to find the best restaurants and hotels
+                    everywhere
+                  </h2>
+                </div>
+                <div class="link basis-3/12 pt-[22px]">
+                  <img
+                    class="w-[216px] h-[76px] py-[6px]"
+                    src="https://d3h1lg3ksw6i6b.cloudfront.net/images/app/appstore/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                    alt=""
+                  />
+                  <img
+                    class="w-[216px] h-[76px] py-[6px]"
+                    src="https://d3h1lg3ksw6i6b.cloudfront.net/images/app/appstore/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="px-6">
+      <div class="container">
+        <div class="footer-main py-5">
+          <div class="row px-2 mb-5">
+            <div class="title mb-4">
+              <h4 class="text-[16px]">
+                Be the first to get news and update about the MICHELIN Guide
+              </h4>
+            </div>
+            <div class="email-subcrible">
+              <form action="">
+                <input
+                  class="p-4 border-[1px] rounded-[5px] w-full placeholder:text-[22px] mb-4"
+                  type="text"
+                  placeholder="Your Email"
+                />
+                <button
+                  class="w-full px-[24px] rounded-[5px] py-[14px] bg-[#bd2333] text-6 font-bold text-[#fff]"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <div class="foot-note text-6 mt-6">
+                <sub class="text-[#4d4d4d]">
+                  Michelin will process your personal data to manage your
+                  subscription and measure the performance of our campaigns and
+                  analyze your interactions with our communications. Your data
+                  can be shared with others Michelin affiliate (TabletHotels and
+                  Robert Parker) in order to know you better and with your
+                  consent sending you marketing offers. You can manage your
+                  communication preferences at any time or unsubscribe using the
+                  link included into all our emails. To exercise your Privacy
+                  rights:
+                  <a href="" class="underline">Contact us</a>
+                  . Learn more about how Michelin manage your data
+                  <a href="" class="underline">here.</a>
+                </sub>
+              </div>
+            </div>
+          </div>
+          <div class="social-media-follow px-[8px]">
+            <div class="social-media-container pb-5 mb-5">
+              <h4 class="mb-4">Follow us</h4>
+              <div class="link flex">
+                <a href=""
+                  ><img
+                    class="h-[40px] mr-4"
+                    src="/images/instagram-382x.png"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    class="h-[40px] mr-4"
+                    src="/images/youtube-38.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    class="h-[40px] mr-4"
+                    src="/images/facebook-38.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-info">
+            <div class="selection-guide flex justify-between mb-4">
+              <div class="title">
+                <h2>MICHELIN Guide selections</h2>
+              </div>
+              <div class="dropdown-select-guide">
+                <img src="icons/bx-chevron-down.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="items-selection-guide grid hidden gap-4 text-[#757575] text-[14px]"
+            >
+              <a class="hover:underline" href="">Abu Dhabi</a>
+              <a class="hover:underline" href="">Argentina</a>
+              <a class="hover:underline" href="">Austria</a>
+              <a class="hover:underline" href="">Brazil</a>
+              <a class="hover:underline" href="">Canada</a>
+              <a class="hover:underline" href="">China</a>
+              <a class="hover:underline" href="">Dubai</a>
+              <a class="hover:underline" href="">Estonia</a>
+              <a class="hover:underline" href="">Finland</a>
+              <a class="hover:underline" href="">Germany</a>
+              <a class="hover:underline" href="">France</a>
+              <a class="hover:underline" href="">Hong Kong</a>
+              <a class="hover:underline" href="">Hungary</a>
+              <a class="hover:underline" href="">Japan</a>
+              <a class="hover:underline" href="">Italia</a>
+              <a class="hover:underline" href="">Dubai</a>
+              <a class="hover:underline" href="">Hungary</a>
+              <a class="hover:underline" href="">Iceland</a>
+              <a class="hover:underline" href="">VietNamese</a>
+              <a class="hover:underline" href="">USA</a>
+            </div>
+            <div
+              class="michelin-guide text-[#757575] text-[14px] hover:underline border-b-[1px] pb-4"
+            >
+              <div class="title">
+                <h2>MICHELIN Guide</h2>
+              </div>
+              <div class="content gap-4 text-[#757575] text-[14px]">
+                <div class="about-guide">
+                  <a class="hover:underline" href="">About the Guide</a>
+                </div>
+                <div class="restaurants">
+                  <a class="hover:underline" href="">Restaurants</a>
+                </div>
+                <div class="hotel">
+                  <a class="hover:underline" href="">Hotels</a>
+                </div>
+                <div class="partnership">
+                  <a class="hover:underline" href="">TheFork prefered partnership</a>
+                </div>
+                <div class="contactus">
+                  <a class="hover:underline" href="">Contact Us</a>
+                </div>
+                <div class="review">
+                  <a class="hover:underline" href="">Leave a review</a>
+                </div>
+              </div>
+            </div>
+            <div class="michelin-group pt-5">
+              <div class="title mb-4">
+                <h2>The MICHELIN group</h2>
+              </div>
+              <div class="content flex gap-4">
+                <img class="w-[92px] h-[133px] mr-4" src="images/bib-michelin-man-footer.svg" alt="">
+                <div class="link grid text-[#757575] text-[14px]">
+                  <a class="hover:underline" href="">The MICHELIN Company</a>
+                  <a class="hover:underline" href="">MICHELIN Tires</a>
+                  <a class="hover:underline" href="">ViaMichelin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-10 border-t-[1px] border-t-[#af8d5a] text-[#757575] text-[14px] grid justify-center">
+        <div class="flex justify-center">
+          <img class="px-2 mb-8" src="/images/Michelin-guide-vertical.svg" alt="">
+        </div>
+        <div class="text-[#4d4d4d] text-center">
+          <span>Copyright © 2024 MICHELIN Guide. All rights reserved.</span>
+        </div>
+        <div class="flex mt-[10px]">
+          <a class="hover:underline after:content-['.'] after:px-2" href="">Terms of Use</a>
+          <a class="hover:underline after:content-['.'] after:px-2" href="">Cookies</a>
+          <a class="hover:underline after:content-['.'] after:px-2" href="">Privacy Policy</a>
+          <a class="hover:underline" href="">Legal Notice</a>
+        </div>
+      </div>
+    </footer>
+    <p></p>
+  </body>
+</html>
