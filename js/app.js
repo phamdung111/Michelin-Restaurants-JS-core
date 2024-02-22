@@ -21,3 +21,15 @@ dropdownSelectGuide.addEventListener("click", function () {
     dropdownSelectGuide.firstElementChild.src = 'icons/bx-chevron-down.svg'
   }
 });
+
+const navbarUserButtonDesktop = document.querySelector('.navbar-user-button-desktop');
+const menuUserDesktop = document.querySelector('.menu-user-desktop');
+isShowMenuDesktop = false;
+navbarUserButtonDesktop.addEventListener('click', function() {
+  isShowMenuDesktop = !isShowMenuDesktop;
+  if(isShowMenuDesktop) {
+    menuUserDesktop.classList.remove('hidden');
+  }else{
+    menuUserDesktop.classList.add('hidden');
+  }
+})
