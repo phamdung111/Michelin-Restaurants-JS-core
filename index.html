@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>New Restaurants</title>
     <link rel="stylesheet" href="style.css" />
     <script src="js/app.js" defer></script>
     <link
@@ -13,7 +13,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="flex justify-between header h-[64px]">
+    <header
+      class="flex justify-between bg-[#fff] h-[64px] shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)]"
+    >
       <div class="logo">
         <img
           class="w-[300px] min-h-16"
@@ -21,8 +23,8 @@
           alt=""
         />
       </div>
-      <div class="navbar">
-        <div class="wrap">
+      <div class="navbar flex items-center">
+        <div class="wrap-nav-mobile lg:hidden">
           <div class="nav-mobile">
             <div class="nav-button px-[18px] py-[8px] float-right">
               <img
@@ -32,7 +34,7 @@
               />
             </div>
             <div
-              class="nav-items hidden absolute top-16 left-0 p-[25px] z-100 bg-[#ffffff] w-screen transition-[750ms]"
+              class="nav-items hidden absolute top-16 left-0 p-[25px] bg-[#ffffff] h-screen w-screen transition-[750ms] z-10"
             >
               <div class="account grid border-b-[1px]">
                 <a class="h-[39px]" href="#">Login</a>
@@ -47,6 +49,52 @@
               </div>
               <div class="language pt-[16px]">
                 <a class="h-[39px]" href="#">Global - English</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="navbar-desktop hidden lg:block items-center flex text-[#333333]"
+        >
+          <div class="navbar-menu text-[15px] flex items-center">
+            <ul class="flex">
+              <li>
+                <a
+                  class="px-[22px] py-[6px] bg-[#bb2637] rounded-[8px] mr-[14px]"
+                  href=""
+                  >Restaurants</a
+                >
+              </li>
+              <li><a class="px-[22px] py-[6px]" href="">Hotels</a></li>
+              <li><a class="px-[22px] py-[6px]" href="">Magazine</a></li>
+              <li><a class="px-[22px] py-[6px]" href="">Favorites</a></li>
+            </ul>
+            <div
+              class="navbar-user px-4 py-2 border-[#ccc] border-[1px] rounded-[8px] mr-6 relative"
+            >
+              <button class="navbar-user-button-desktop flex">
+                <img
+                  class="w-[38px] border-[1px] border-[#ccc] rounded-full"
+                  src="/icons/michelin-default-profile-image.png"
+                  alt=""
+                />
+                <img class="w-[38px]" src="icons/bx-menu.svg" alt="" />
+              </button>
+              <div class="menu-user-desktop absolute border-[1px] border-[#ccc] shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] min-w-[340px] right-0 rounded-[8px] z-10 bg-[#fff] hidden">
+                <div class="wrap p-[30px]">
+                  <div class="login-register grid pb-4 border-b-[2px]">
+                    <a class="py-[6px]" href="">Login</a>
+                    <a class="py-[6px]" href="">Register</a>
+                  </div>
+                  <div class="guides grid pb-4 border-b-[2px] pt-4">
+                    <a class="py-[6px]" href="">Best-of Guides</a>
+                    <a class="py-[6px]" href="">Contact us</a>
+                    <a class="py-[6px]" href="">Subscribe to our newsletter</a>
+                    <a class="py-[6px]" href="">TheFork prefered partnership</a>
+                    <a class="py-[6px]" href="">TheFork partner restaurant</a>
+                  </div>
+                  <div class="language pt-4">Global English</div>  
+                </div>
               </div>
             </div>
           </div>
@@ -174,446 +222,428 @@
               New: 1-20 of 297 restaurants
             </h1>
           </div>
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/Buchnas Food-Stella Costa-Fotografie-24.jpg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/Buchnas Food-Stella Costa-Fotografie-24.jpg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/DSC04688-2-min.jpeg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/DSC04688-2-min.jpeg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/DSC04561-min-2.jpg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/DSC04561-min-2.jpg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/Kopie von EOSR9072.png"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/Kopie von EOSR9072.png"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/Holzgarten-Erlangen-Food6.jpeg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/Holzgarten-Erlangen-Food6.jpeg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/Holzgarten-Erlangen-Food4.jpeg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/Holzgarten-Erlangen-Food4.jpeg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <img
-                  class="w-full h-auto"
-                  src="/images/https://mitp-p-001.sitecorecontenthub.cloud/api/public/content/56d8fc20ac824758937fdcbe89eed3d0"
-                  alt=""
-                />
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <img
+                      class="w-full h-auto rounded-[5px]"
+                      src="/images/IMG_1823-Bearbeitet.jpg"
+                      alt=""
+                    />
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <img
-                  class="w-full h-auto"
-                  src="/images/IMG_1823-Bearbeitet.jpg"
-                  alt=""
-                />
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/IMG_1569.jpeg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/IMG_1569.jpeg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/19066bb1555dc41f2e35041a8f17441e.jpeg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/19066bb1555dc41f2e35041a8f17441e.jpeg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/Callo de Hacha.jpg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img
-                    class="w-full h-auto"
-                    src="/images/Callo de Hacha.jpg"
-                    alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
+            <div class="shadow-[0_0_8px_-0px_rgba(0,0,0,0.2)] rounded-[5px]">
+              <a href="">
+                <div class="result-product]">
+                  <div class="imgage relative">
+                    <a href="#"
+                      ><img
+                        class="w-full h-auto rounded-[5px]"
+                        src="/images/MTP.jpeg"
+                        alt=""
+                    /></a>
+                    <button
+                      class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
                     >
+                      Reserve a table
+                    </button>
                   </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
+                  <div class="information p-4 text-black">
+                    <div class="container">
+                      <div class="show-new">
+                        <span
+                          class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
+                          >New</span
+                        >
+                      </div>
+                      <div class="title mt-1">
+                        <a class="text-[28px] mb-6" href=""
+                          >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
+                        >
+                        <div class="info-restaurant grid gap-1 mt-[16px]">
+                          <span>Mettlach, Germany</span>
+                          <span>€€€ · Classic Cuisine</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a href="">
-            <div class="result-product]">
-              <div class="imgage relative">
-                <a href="#"
-                  ><img class="w-full h-auto" src="/images/MTP.jpeg" alt=""
-                /></a>
-                <button
-                  class="reserve-a-table absolute bottom-[18px] left-[18px] bg-white p-[6px] rounded-[8px]"
-                >
-                  Reserve a table
-                </button>
-              </div>
-              <div class="information p-4 text-black">
-                <div class="container">
-                  <div class="show-new">
-                    <span
-                      class="text-[16px] text-[#bd2333] box-border py-[6px] px-[16px] border-[#bd2333] border-[1px] rounded-[8px]"
-                      >New</span
-                    >
-                  </div>
-                  <div class="title mt-1">
-                    <a class="text-[28px] mb-6" href=""
-                      >Buchnas Landhotel Saarschleife - Buchnas Landküche</a
-                    >
-                    <div class="info-restaurant grid gap-1 mt-[16px]">
-                      <span>Mettlach, Germany</span>
-                      <span>€€€ · Classic Cuisine</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+          </div>
         </div>
 
-        <div class="panigation flex justify-center">
+        <div class="panigation flex justify-center mt-[89px]">
           <ul class="panigation-container flex align-center">
             <li class="m-[3px]">
               <!-- <object
@@ -806,7 +836,9 @@
                   <a class="hover:underline" href="">Hotels</a>
                 </div>
                 <div class="partnership">
-                  <a class="hover:underline" href="">TheFork prefered partnership</a>
+                  <a class="hover:underline" href=""
+                    >TheFork prefered partnership</a
+                  >
                 </div>
                 <div class="contactus">
                   <a class="hover:underline" href="">Contact Us</a>
@@ -821,7 +853,11 @@
                 <h2>The MICHELIN group</h2>
               </div>
               <div class="content flex gap-4">
-                <img class="w-[92px] h-[133px] mr-4" src="images/bib-michelin-man-footer.svg" alt="">
+                <img
+                  class="w-[92px] h-[133px] mr-4"
+                  src="images/bib-michelin-man-footer.svg"
+                  alt=""
+                />
                 <div class="link grid text-[#757575] text-[14px]">
                   <a class="hover:underline" href="">The MICHELIN Company</a>
                   <a class="hover:underline" href="">MICHELIN Tires</a>
@@ -832,17 +868,29 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom py-10 border-t-[1px] border-t-[#af8d5a] text-[#757575] text-[14px] grid justify-center">
+      <div
+        class="footer-bottom py-10 border-t-[1px] border-t-[#af8d5a] text-[#757575] text-[14px] grid justify-center"
+      >
         <div class="flex justify-center">
-          <img class="px-2 mb-8" src="/images/Michelin-guide-vertical.svg" alt="">
+          <img
+            class="px-2 mb-8"
+            src="/images/Michelin-guide-vertical.svg"
+            alt=""
+          />
         </div>
         <div class="text-[#4d4d4d] text-center">
           <span>Copyright © 2024 MICHELIN Guide. All rights reserved.</span>
         </div>
         <div class="flex mt-[10px]">
-          <a class="hover:underline after:content-['.'] after:px-2" href="">Terms of Use</a>
-          <a class="hover:underline after:content-['.'] after:px-2" href="">Cookies</a>
-          <a class="hover:underline after:content-['.'] after:px-2" href="">Privacy Policy</a>
+          <a class="hover:underline after:content-['.'] after:px-2" href=""
+            >Terms of Use</a
+          >
+          <a class="hover:underline after:content-['.'] after:px-2" href=""
+            >Cookies</a
+          >
+          <a class="hover:underline after:content-['.'] after:px-2" href=""
+            >Privacy Policy</a
+          >
           <a class="hover:underline" href="">Legal Notice</a>
         </div>
       </div>
